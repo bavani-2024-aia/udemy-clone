@@ -86,7 +86,7 @@ body {
     border: solid #A435F0 1px;
 }
 
-.categories p:hover{
+.categories p:hover {
     transition: 1s;
     background-color: transparent;
     color: black;
@@ -109,19 +109,20 @@ body {
     position: absolute;
     top: 10%;
     left: 5%;
-    
+
     animation-name: zoom;
     animation-duration: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
 }
 
-@keyframes zoom{
-    0%{
+@keyframes zoom {
+    0% {
         transform: scale(0);
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale(1);
     }
@@ -139,8 +140,9 @@ body {
 }
 
 .course-card {
-    width: 22%;
-    margin-bottom: 20px;
+    flex-grow: 1;
+    flex-basis: 20%;
+
 }
 
 .course-card img {
@@ -202,4 +204,27 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/*Media Queries*/
+
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .course-card {
+        flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar__s2, .navbar__s3{
+        display: none;
+    }
+
 }
